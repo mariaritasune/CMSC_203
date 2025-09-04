@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class CookCalorieCounter {
+    public static void main(String[] args) {
+        
+        int cookiesInOneBag = 40;
+        int servingsInOneBag = 10;
+        int caloriesInOneServing = 300;
+
+        // Cumpute calories per cookie
+        int caloriesInOneCookie = (caloriesInOneServing * servingsInOneBag) / cookiesInOneBag;
+
+        Scanner keyboard = new Scanner(System.in); 
+			
+			System.out.print("Enter number of cookies eaten: ");
+			int cookiesEaten = keyboard.nextInt();
+
+			
+			int totalCalories = cookiesEaten * caloriesInOneCookie;
+
+			
+			System.out.println("Your calorie intake was: " + totalCalories + " calories.");
+		}
+    }
+
+
