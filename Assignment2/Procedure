@@ -1,0 +1,83 @@
+/*
+ * Class: CMSC203 
+ * Instructor: Professor Grinberg
+ * Description: This class represents a medical procedure 
+ * that has been performed on a patient.
+ * Platform/compiler: Eclipse
+ * I pledge that I have completed the programming 
+ * assignment independently. I have not copied the code 
+ * from a student or any source. I have not given my code 
+ * to any student.
+   Print your Name here: Maria Marques
+*/
+public class Procedure {
+	
+	// Fields
+    private String procedureName;
+    private String procedureDate;
+    private String practitionerName;
+    private double procedureCharge;
+    
+    // No-arg constructor
+    public Procedure() {
+    }
+    
+    // Parametrized constructor for name and date
+    public Procedure(String procedure_Name, String procedure_Date) {
+        procedureName = procedure_Name;
+        procedureDate = procedure_Date;
+    }
+    
+    // Parametrized constructor for all attributes
+    public Procedure(String procedure_Name, String procedure_Date, 
+    		String practitioner_Name, double procedure_Charge) {
+        procedureName = procedure_Name;
+        procedureDate = procedure_Date;
+        practitionerName = practitioner_Name;
+        procedureCharge = procedure_Charge;
+    }
+    
+ // Accessors (getters)
+    public String getProcedureName() {
+        return procedureName;
+    }
+
+    public String getProcedureDate() {
+        return procedureDate;
+    }
+
+    public String getPractitionerName() {
+        return practitionerName;
+    }
+
+    public double getProcedureCharge() {
+        return procedureCharge;
+    }
+
+    // Mutators (setters)
+    public void setProcedureName(String procedure_Name) {
+        procedureName = procedure_Name;
+    }
+
+    public void setProcedureDate(String procedure_Date) {
+        procedureDate = procedure_Date;
+    }
+
+    public void setPractitionerName(String practitioner_Name) {
+        practitionerName = practitioner_Name;
+    }
+
+    public void setProcedureCharge(double procedure_Charge) {
+        procedureCharge = procedure_Charge;
+    }
+    
+    // toString method
+    public String toString() {
+        return "Procedure Information:\n" +
+                "Procedure Name: " + procedureName + "\n" +
+                "Procedure Date: " + procedureDate + "\n" +
+                "Practitioner Name: " + practitionerName + "\n" +
+                "Procedure Charge: $" + String.format("%.2f", procedureCharge);
+    }
+
+}
